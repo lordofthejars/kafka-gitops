@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: kgitops-app
-  namespace: openshift-gitops
+  namespace: janus-argocd
 spec:
   destination:
     namespace: kgitops
@@ -10,7 +10,7 @@ spec:
   project: default 
   source: 
     path: kafka
-    repoURL: https://github.com/redhat-developer-demos/openshift-gitops-examples
+    repoURL: https://github.com/lordofthejars/kafka-gitops.git
     targetRevision: main
   syncPolicy: 
     automated:
